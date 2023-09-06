@@ -29,6 +29,7 @@
                 <li class="list-group-item">Item 2</li>
                 <li class="list-group-item">Item 3</li>
                 <li class="list-group-item">Item 4</li>
+                <li class="new-item">Item 5</li>
             </ul>
         </div>
     </div>
@@ -45,6 +46,15 @@
         {
             dip[i].style.fontWeight="Bold";
         }
+
+        let n = document.getElementsByClassName('new-item');
+        n[0].style.color="Brown";
+        n[0].style.fontWeight="Bold";
+
+        let nex = document.getElementsByTagName('li');
+        nex[4].style.background="grey";
+        nex[4].style.border="2px solid black";
+
     </script>
 
 </body>

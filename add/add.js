@@ -14,8 +14,12 @@ let filt = document.getElementById('filter');
     li.appendChild(document.createTextNode(newitem));
     document.getElementById('item').value = '';
     var del = document.createElement('button');
-    del.className="btn btn-danger btn-sm float-right delete";
+    del.className="btn btn-danger btn-sm float-right delete mx-1";
     del.appendChild(document.createTextNode('X'));
+    var edit= document.createElement('button');
+    edit.className='btn btn-primary btn-sm float-right';
+    edit.appendChild(document.createTextNode('edit'));
+    li.appendChild(edit);
     li.appendChild(del);
     itemlist.append(li);
     
@@ -25,11 +29,9 @@ let filt = document.getElementById('filter');
  function remove(e)
  {
     //e.preventDefault();
-    if(e.target.classList.contains('delete'));
-    {
-        if(confirm('Are you sure?'))
-        {
-            let s= e.target.parentElement;
+    if (e.target.classList.contains('delete')) {
+        if (confirm('Are you sure?')) {
+            let s = e.target.parentElement;
             itemlist.removeChild(s);
         }
     }
